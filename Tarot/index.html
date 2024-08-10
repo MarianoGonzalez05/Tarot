@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=1dkqoKE0Cn1S&format=png&color=000000" type="image/x-icon">
-    <title>TIRADOR DE CARTAS</title>
+    <title>DARIKA LA TAROTISTA</title>
     <style>
-        
         body {
             font-family: monospace;
             margin: 0;
             padding: 20px;
             background-image: url(./fondo.jpg);
         }
-        h2, h1{
+        h2, h1 {
             font-family: monospace;
             color: yellow;
         }
+
         .card {
-            background: rgba(255, 255, 255, 0.603);
+            color: white;
+            background: rgba(0, 0, 0, 0.603);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.747);
             padding: 20px;
             margin: 10px;
             text-align: center;
+            font-family: cursive;
         }
         .card img {
             max-width: 100px;
@@ -35,32 +37,62 @@
         #draw-button {
             padding: 10px 20px;
             background-color: #4400ff;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             margin-top: 20px;
+            font-family: cursive;
         }
         #draw-button:hover {
             background-color: #797700;
         }
         #number-input {
+            color: rgb(0, 0, 0);
             padding: 10px;
-            font-size: 16px;
+            font-size: 17px;
             margin-right: 10px;
             margin-top: 10px;
+            background-color: #fbff00be;
+            border-radius: 20px;
+            text-align: center;
+            font-family: cursive;
         }
-
+        /* Ocultar los botones de spinners en input type number */
+        input[type="number"] {
+            -moz-appearance: textfield; /* Firefox */
+            appearance: textfield; /* Chrome, Safari, Edge */
+        }
+        
+        /* Ocultar los botones en el campo input en Chrome y Safari */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        footer {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
     </style>
 </head>
 <body>
-    <center><h1>Vicky tira las cartas</h1>
-    <label for="number-input"><h2>Cuantas queres tirar?</h2></label>
-    <br>
-    <input type="number" id="number-input" min="1" value="3">
-    <br>
-    <button id="draw-button">LANZAR</button></center>
+    <center>
+        <h1><a href="">Vicky</a> tira las cartas</h1>
+        <label for="number-input">
+            <h2>Cuántas queres tirar?</h2>
+        </label>
+        <br>
+        <input type="number" id="number-input" min="1" value="3" inputmode="numeric" pattern="\d*">
+        <br>
+        <button id="draw-button">LANZAR</button>
+    </center>
     <div id="tarot-cards"></div>
 
     <script>
@@ -93,5 +125,9 @@
             }
         });
     </script>
+
+    <footer>
+        <center><a href="https://www.instagram.com/xaviiergnz/">📸Mariano Gonzalez📸</a></center>
+    </footer>
 </body>
 </html>
